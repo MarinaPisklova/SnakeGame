@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="src/style.css">
+        <link rel="shortcut icon" href="img/Icon.png" type="image/png">
+        <title>SnakeGame</title>
+    </head>
+    <body onload="drawGame()">
+        <div id='wrapper'>
+            <div id="leftSide">
+                <div id="leftCenter">
+                    <div id="rules">
+                        <p><b>Задача игры:</b> съесть как можно больше "яблок", избегая столкновений с границами поля или с хвостом змейки</p>
+                        <p><b>Правила игры:</b> Перемещение змейки по игровому полю осуществляется посредством клавиш управления курсором.</p>
+                        <p>Также вы можете регулировать сложность игры, от уровня сложности зависит скорость змейки.</p>
+                    </div>
+                    <div id="buttonRules" class="activeMenu"><p>Правила</p></div>
+                </div>
+            </div>
+            <div id='main'>
+                <div id="headerCenter">
+                    <div class='infoBlock' id="gameTimerBlock">
+                        Время:
+                        <p id="timer">
+                            <span id="min">00</span> : <span id="sec">00</span>
+                        </p>
+                    </div>
+                    <div class='infoBlock' id="diffLevelBlock">
+                        Сложность:
+                        <p id='diffLevel'>Простая</p>
+                    </div>
+                    <div class='infoBlock' id="scoreBlock">
+                        Счет:
+                        <p id='score'>0</p>
+                    </div>
+                </div>
+                <canvas id='gameField' width="500px" height="500px"></canvas>
+                <dialog id="pauseMessage">
+                    <p>Пауза</p>
+                    <p id='continueText'>Для продолжения используйте кнопки управления</p>
+                </dialog>
+                <dialog id="gameOverMessage">
+                    <p>Конец игры</p>
+                    <p id="result"></p>
+                </dialog>
+                <div id='footerCenter'>
+                    <div><input class="inputB" id="buttonPause" type='submit' value="Пауза"></div>
+                    <div id="dropdown">
+                        <div id='myDrop' class="myDropdown">
+                            <p class ="diffValue" data-diff= "3">Простая</p>
+                            <p class ="diffValue" data-diff= "2">Средняя</p>
+                            <p class ="diffValue" data-diff= "1">Сложная</p>
+                        </div>
+                        <input class="inputB activeButton" id="buttonDiff" type='submit' value="Сложность">
+                    </div>
+                    <div><input class="inputB" id="buttonNewGame" type='submit' value="Новая игра"></div>
+                </div>
+                <div id='C'>Писклова Марина Алексеевна © 2021 г.</div>
+            </div>
+            <div id="rightSide">
+                <div id="rightCenter">
+                    <div id="buttonResult" class="activeMenu"><p>Счет</p></div>
+                    <div id="tableResult">
+                        <h3>Лучшие результаты</h3>
+                        <table id="rates">
+                            <tr>
+                                <th></th>
+                                <th>Счёт</th>
+                                <th>Время</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="src/index.js"></script>
+    </body>
+</html>
+
