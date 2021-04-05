@@ -12,6 +12,9 @@ body, ul, li, a, p, div, h1, h2, main, input {
 #headerCenter {
     height: 8%;
     width: 70%;
+}
+
+#headerCenter {
     display: inline-flex;
     justify-content: space-between;
     margin-top: 10px;
