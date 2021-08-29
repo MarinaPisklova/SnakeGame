@@ -415,7 +415,7 @@ for (var i = 0; i < diffValue.length; i++) {
         diffValue[i].addEventListener('click', setDiff);
     }
 function setDiff(){
-    speed = parseInt(this.dataset.diff);
+    speed = parseInt(this.dataset.diff * 5);
     document.getElementById("myDrop").classList.toggle("show");
     document.getElementById('diffLevel').innerHTML = this.innerHTML;
 }
